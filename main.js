@@ -8,9 +8,10 @@ si es menor: demasiado bajo
 si es igual: has ganado campeona!
 si no introduce un numero valido: el numero debe de estar entre 1 y 100*/
 
-/*EVENTO CLICK DONDE PASAN DOS COSAS: 
+/*EVENTO CLICK DONDE PASAN TRES COSAS: 
 SE GENERA UN NUMERO ALEATORIO
-SE COMPARA ESE NUMERO CON EL QUE HA ESCRITO LA USUARIA*/
+SE COMPARA ESE NUMERO CON EL QUE HA ESCRITO LA USUARIA
+CONTABILIZAR LOS INTENTOS/CLICKS DE LA USUARIA*/
 
 const button = document.querySelector (".js-button");
 const inputNumber = document.querySelector (".js-inputNumber");
@@ -21,13 +22,15 @@ function getRandomNumber(max) {
   return Math.ceil(Math.random() * max); 
 }
 
+const getNumber = getRandomNumber(100);
+console.log("el numero generado es:", getNumber);
+
+
 let clickCount = 0;
 
 const handleClick = (event) => {
     event.preventDefault();
-    const getNumber = getRandomNumber(100);
-    console.log("el numero generado es:", getNumber);
-    const inputValue = inputNumber.value;
+    const inputValue = parseInt(inputNumber.value);
 
      if (inputValue < 1 || inputValue > 100){
          track.innerHTML = "El número debe estar entre 1 y 100"
