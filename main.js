@@ -8,9 +8,9 @@ si es menor: demasiado bajo
 si es igual: has ganado campeona!
 si no introduce un numero valido: el numero debe de estar entre 1 y 100*/
 
-/*EVENTO CLICK DONDE PASAN TRES COSAS: 
-SE GENERA UN NUMERO ALEATORIO
-SE COMPARA ESE NUMERO CON EL QUE HA ESCRITO LA USUARIA
+/*SE GENERA UN NUMERO ALEATORIO
+EVENTO CLICK DONDE PASAN DOS COSAS: 
+SE COMPARA ESE NUMERO CON EL QUE HA ESCRITO LA USUARIA CON EL NUMERO ALEATORIO GENERADO
 CONTABILIZAR LOS INTENTOS/CLICKS DE LA USUARIA*/
 
 const button = document.querySelector (".js-button");
@@ -25,11 +25,7 @@ function getRandomNumber(max) {
 const getNumber = getRandomNumber(100);
 console.log("el numero generado es:", getNumber);
 
-
-let clickCount = 0;
-
-const handleClick = (event) => {
-    event.preventDefault();
+function comparateValues() {
     const inputValue = parseInt(inputNumber.value);
 
      if (inputValue < 1 || inputValue > 100){
@@ -41,16 +37,16 @@ const handleClick = (event) => {
     }else if (inputValue === getNumber){
         track.innerHTML = "¡HAS GANADO CAMPEONA!"
     }
-
-    clickCount++;
-
-    tries.innerHTML = `Número de intentos: ${clickCount}`
-
-
 }
 
-        
+let clickCount = 0;
+const handleClick = (event) => {
+    event.preventDefault();
+    comparateValues();
     
 
+    clickCount++;
+    tries.innerHTML = `Número de intentos: ${clickCount}`
+}
 
 button.addEventListener("click", handleClick);
