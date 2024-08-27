@@ -1,65 +1,90 @@
 :root {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.main{
-    padding-left: 20px;
+.main {
+  padding-left: 20px;
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .form__tittle {
-    font-size: 45px;
-    margin: 0;
-    color: rgb(80, 75, 75);
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bolder;
+  font-size: 45px;
+  margin: 0;
+  color: rgb(80, 75, 75);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
 }
 
 .form__label-introduceNumber {
-    font-size: 23px;
-    margin: 15px 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(80, 75, 75);
+  font-size: 23px;
+  margin: 15px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(80, 75, 75);
 }
 
-.form__input-number{
-    width: 250px;
-    height: 30px;
-    background-color: rgb(209, 208, 208);
-    box-shadow: none;
-    border: none;
-    border-radius: 5px;
-    margin-bottom: 10px
+.form__input-number {
+  width: 250px;
+  height: 30px;
+  background-color: rgb(209, 208, 208);
+  box-shadow: none;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 .button {
-    width: 80px;
-    height: 30px;
-    border: none;
-    background-color: deepskyblue;
-    color: aliceblue;
-    border-radius: 5px;
-    font-size: 19px;
+  width: 80px;
+  height: 30px;
+  border: none;
+  background-color: deepskyblue;
+  color: aliceblue;
+  border-radius: 5px;
+  font-size: 19px;
 }
 
-.pista {
-    border: solid rgb(209, 208, 208) 4px;
-    padding: 5px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 23px;
-    color: rgb(80, 75, 75);
+.clue {
+  border: solid rgb(209, 208, 208) 4px;
+  padding: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 23px;
+  color: rgb(80, 75, 75);
 }
 
 .tries {
-    border: solid rgb(209, 208, 208) 4px;
-    padding: 5px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 23px;
-    color: rgb(80, 75, 75);
+  border: solid rgb(209, 208, 208) 4px;
+  padding: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 23px;
+  color: rgb(80, 75, 75);
+}
+
+@media (max-width: 390px) {
+  .form__tittle {
+    font-size: 35px;
+    margin: 20px auto;
+  }
+  .form__label-introduceNumber {
+    font-size: 18px;
+  }
+  .button {
+    font-size: 17px;
+  }
+  .clue {
+    font-size: 18px;
+  }
+  .tries {
+    font-size: 18px;
+  }
+  .form__input-number {
+    margin-bottom: 20px;
+  }
+  .main {
+    padding-left: 3px;
+  }
 }
