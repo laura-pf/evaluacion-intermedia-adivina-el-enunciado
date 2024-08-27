@@ -16,7 +16,7 @@ Este proyecto consta de un juego en el que se genera un numero aleatorio del 1 a
 
 Las instrucciones para instalar el proyecto:
 
-git clone https://github.com/laura-pf/evaluacion-intermedia-modulo-3.git
+git clone https://github.com/laura-pf/evaluacion-intermedia-adivina-el-enunciado.git
 
 ## Uso
 
